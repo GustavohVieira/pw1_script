@@ -1,20 +1,28 @@
+function calculaA(b, c, d){
+    return (b*c)/d;
+}
+
+function calculaB(a, c, d){
+    return (a*d)/c;
+}
+
+function calculaC(b, a, d){
+    return (a*d)/b;
+}
+
+function calculaD(b, c, a){
+    return (b*c)/a;
+}
+
 function regradetres(a, b, c, d){
     if (a == 0){
-        a = (b*c)/d;
-        console.log("a");
-        console.log(a);
+        return (b, c, d);
     }else if (b == 0){
-        b = (a*d)/c;
-        console.log("b");
-        console.log(b);
+        return (a, c, d);
     }else if (c == 0){
-        c = (a*d)/b;
-        console.log("c");
-        console.log(c);
+        return (b, a, d);
     }else{
-        d = (b*c)/a;
-        console.log("d");
-        console.log(d);
+        return (b, c, a);
     }
 }
 
