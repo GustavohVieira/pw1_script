@@ -1,0 +1,28 @@
+body {
+    background-color: darkcyan;
+}
+
+input {
+    background-color: rgb(155, 155, 155);
+    border-color: white;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    border-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.form {
+    background-color: rgb(252, 252, 252);
+    margin: 5% 42% 5% 42%;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    align-content: center;
+    color: darkcyan;
+}
