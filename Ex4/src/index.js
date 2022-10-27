@@ -1,4 +1,18 @@
-function calculos ()
+function calculos (){
+    switch (opcao){
+        case "pitagoras":
+        return recebePitagoras();
+        break;
+        case "regra":
+        return recebeRegra();
+        break;
+        case "calculadora":
+        return recebeCalculadora();
+        break;
+        default:
+            return "Fora do escopo de funções."
+    }
+}
 
 function escolhaOperacao (opcao, p1 ,p2, p3, p4){
     switch (opcao){
