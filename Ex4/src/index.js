@@ -1,4 +1,6 @@
-function escolhaOperecao (opcao, p1 ,p2, p3, p4){
+function calculos ()
+
+function escolhaOperacao (opcao, p1 ,p2, p3, p4){
     switch (opcao){
         case "pitagoras":
         return calculaPitagoras(p1, p2, p3);
@@ -16,37 +18,76 @@ function escolhaOperecao (opcao, p1 ,p2, p3, p4){
 
 // PITAGORAS
 
-function calculaH(ca, co){
-    return Math.sqrt(Math.pow(ca, 2) + Math.pow(co, 2));
+function calculaH(p2, p3){
+    return Math.sqrt(Math.pow(p2, 2) + Math.pow(p3, 2));
 }
 
-function calculaCa(co, h){
-    return Math.sqrt(Math.pow(h, 2) + Math.pow(co, 2));
+function calculaCa(p3, p1){
+    return Math.sqrt(Math.pow(p1, 2) + Math.pow(p3, 2));
 }
 
-function calculaCo(ca, h){
-    return Math.sqrt(Math.pow(h, 2) + Math.pow(ca, 2));
+function calculaCo(p2, p1){
+    return Math.sqrt(Math.pow(p1, 2) + Math.pow(p2, 2));
 }
 
-function calculaPitagoras(h, ca, co){
-    if(h == 0){
-        return calculaH(ca, co);
-    }else if(ca == 0){
-        return calculaCa(co, h);
+function calculaPitagoras(p1, p2, p3){
+    if(p1 == 0){
+        return calculaH(p2, p3);
+    }else if(p2 == 0){
+        return calculaCa(p3, p1);
     }else{
-        return calculaCo(ca, h);
+        return calculaCo(p2, p1);
     }
 }
 
 function recebePitagoras(){
-    let h = document.getElementById("h").value;
-    let ca = document.getElementById("ca").value;
-    let co = document.getElementById("co").value;
+    let p1 = document.getElementById("p1").value;
+    let p2 = document.getElementById("p2").value;
+    let p3 = document.getElementById("p3").value;
 
-    console.log("Resultado: "+calculaPitagoras(h, ca, co));
-    document.getElementById("resposta").innerHTML=calculaPitagoras(h, ca, co);
+    console.log("Resultado: "+calculaPitagoras(p1, p2, p3));
+    document.getElementById("resposta").innerHTML=calculaPitagoras(p1, p2, p3);
 }
 
 // REGRA
+
+function calculaA(p2, p3, p4){
+    return (p2*p3)/p4;
+}
+
+function calculaB(p1, p3, p4){
+    return (p1*p4)/p3;
+}
+
+function calculaC(p2, p1, p4){
+    return (p1*p4)/p2;
+}
+
+function calculaD(p2, p3, p1){
+    return (p2*p3)/p1;
+}
+
+function calculaRegra(p1, p2, p3, p4){
+    if (p1 == 0){
+        return (p2, p3, p4);
+    }else if (p2 == 0){
+        return (p1, p3, p4);
+    }else if (p3 == 0){
+        return (p2, p1, p4);
+    }else{
+        return (p2, p3, p1);
+    }
+
+}
+
+function recebeRegra(){
+    let p1 = document.getElementById("p1").value;
+    let p2 = document.getElementById("p2").value;
+    let p3 = document.getElementById("p3").value;
+    let p4 = document.getElementById("p4").value;
+
+    console.log("Resultado: "+calculaRegra(p1, p2, p3, p4));
+    document.getElementById("resposta").innerHTML=calculaRegra(p1, p2, p3, p4);
+}
 
 // CALCULADORA
