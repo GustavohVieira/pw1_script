@@ -1,3 +1,5 @@
+// CARO PROFESSOR ICOMINHA, ME BUGUEI TUDO E NÃO TERMINEI PQ ME BUGUEI, SUMIMASEN :(
+
 function calculos (){
     switch (opcao){
         case "pitagoras":
