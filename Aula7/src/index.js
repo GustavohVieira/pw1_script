@@ -1,0 +1,21 @@
+const frutas = new Array("Uva","goiaba","melancia","manga","abacaxi");
+console.log(frutas.join (" | "));
+console.log(frutas.pop())
+console.log(frutas.join (" | "));
+frutas.push("kiwi");
+console.log(frutas.join (" | "));
+frutas.push("Melao");
+console.log(frutas.join (" | "));
+frutas.shift();
+console.log(frutas.join (" | "));
+frutas.unshift("limão");
+console.log(frutas.join (" | "));
+frutas.splice(4.0, "Abacaxi");
+console.log(frutas.join (" | "));
+console.log(frutas.join (" | "));
+let outrasFrutas = frutas.slice(2,4);
+console.log(frutas.join (" | "));
+frutas.sort();
+console.log(outrasFrutas.join (" | "));
+frutas.reverse();
+console.log(frutas.join (" | "));
